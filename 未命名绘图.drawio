@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-04-13T03:15:01.084Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="nxi5AhuRda1WvfatBJ0-" version="21.1.4" type="github">
+<mxfile host="app.diagrams.net" modified="2023-04-13T05:46:54.691Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="0DFwQRn9NkGJU54om8Cf" version="21.1.4" type="github">
   <diagram name="第 1 页" id="qRnL3jtGLyBpwK-5J7Cp">
-    <mxGraphModel dx="995" dy="622" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1920" math="0" shadow="0">
+    <mxGraphModel dx="949" dy="622" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1920" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -19,7 +19,7 @@
         <mxCell id="FGeQNSDKWj5AvoNFUdBD-8" value="全局执行上下文" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="100" y="460" width="100" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="FGeQNSDKWj5AvoNFUdBD-18" value="name: undefined&lt;br&gt;foo: 0* 100&lt;br&gt;num1: undefined&lt;br&gt;num2: undefined&lt;br&gt;result: undefined" style="rounded=1;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+        <mxCell id="FGeQNSDKWj5AvoNFUdBD-18" value="name: why&lt;br&gt;foo: 0* 100&lt;br&gt;num1: 20&lt;br&gt;num2: 30&lt;br&gt;result: 50" style="rounded=1;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
           <mxGeometry x="400" y="111" width="190" height="120" as="geometry" />
         </mxCell>
         <mxCell id="FGeQNSDKWj5AvoNFUdBD-19" value="GO" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
@@ -31,7 +31,7 @@
         <mxCell id="FGeQNSDKWj5AvoNFUdBD-21" value="0*100(foo)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="400" y="250" width="80" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="FGeQNSDKWj5AvoNFUdBD-22" value="AO: GO" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="FGeQNSDKWj5AvoNFUdBD-22" value="VO: GO" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="111" y="500" width="240" height="30" as="geometry" />
         </mxCell>
         <mxCell id="FGeQNSDKWj5AvoNFUdBD-23" value="代码执行&lt;br&gt;name = why&lt;br&gt;num1 = 20&lt;br&gt;num2 = 30&lt;br&gt;result = 50&lt;br&gt;执行 foo 函数内代码片段，创建函数执行上下文" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
@@ -43,7 +43,7 @@
         <mxCell id="FGeQNSDKWj5AvoNFUdBD-25" value="函数执行上下文 foo" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="100" y="290" width="120" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="FGeQNSDKWj5AvoNFUdBD-26" value="AO: name:undefined" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="FGeQNSDKWj5AvoNFUdBD-26" value="VO: AO" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="111" y="340" width="239" height="30" as="geometry" />
         </mxCell>
         <mxCell id="FGeQNSDKWj5AvoNFUdBD-28" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="FGeQNSDKWj5AvoNFUdBD-27" target="FGeQNSDKWj5AvoNFUdBD-20">
@@ -51,6 +51,21 @@
         </mxCell>
         <mxCell id="FGeQNSDKWj5AvoNFUdBD-27" value="解析阶段如果遇到函数声明，&lt;br&gt;会创建一个堆内存存储，存储了如下：&lt;br&gt;&lt;div&gt;1. [[scope]]：父级作用域&lt;br&gt;2. 函数执行体&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#FF0000;" vertex="1" parent="1">
           <mxGeometry x="700" y="390" width="230" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="FGeQNSDKWj5AvoNFUdBD-29" value="name: foo&lt;br&gt;arguments: []" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="445" width="190" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="FGeQNSDKWj5AvoNFUdBD-30" value="Foo AO" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="400" y="415" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="FGeQNSDKWj5AvoNFUdBD-31" value="代码执行，执行函数体 foo&lt;br&gt;name = foo&lt;br&gt;打印 name&lt;br&gt;执行后就会销毁" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="111" y="370" width="239" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="FGeQNSDKWj5AvoNFUdBD-35" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="FGeQNSDKWj5AvoNFUdBD-34" target="FGeQNSDKWj5AvoNFUdBD-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FGeQNSDKWj5AvoNFUdBD-34" value="如果没有指向也会销毁" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="630" y="530" width="140" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
